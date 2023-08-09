@@ -1,2 +1,2 @@
-# yubaiyuan-stats.github.io
-Personal  Website: Yubai Yuan
+# xiaozhi2.github.io
+Personal  Website: Xiaozhi
