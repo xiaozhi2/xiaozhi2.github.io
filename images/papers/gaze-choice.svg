@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 720" font-family="Arial, sans-serif">
+  <rect width="1180" height="720" fill="#ffffff"/>
+  <!-- attention bands -->
+  <rect x="60"  y="55" width="225" height="595" fill="#cfdbc5" opacity="0.55"/>
+  <rect x="285" y="55" width="225" height="595" fill="#e7d8cf" opacity="0.55"/>
+  <rect x="510" y="55" width="225" height="595" fill="#bcd6a8" opacity="0.55"/>
+  <rect x="735" y="55" width="285" height="595" fill="#dcab83" opacity="0.55"/>
+  <!-- band labels -->
+  <text x="172" y="100" text-anchor="middle" font-size="26" fill="#3f4a36">Upper left</text>
+  <text x="397" y="100" text-anchor="middle" font-size="26" fill="#7a6a5d">Upper right</text>
+  <text x="622" y="100" text-anchor="middle" font-size="26" fill="#3f5a2a">Lower left</text>
+  <text x="877" y="100" text-anchor="middle" font-size="26" fill="#6b4a25">Lower right</text>
+  <!-- barriers -->
+  <line x1="60" y1="55"  x2="1020" y2="55"  stroke="#c0392b" stroke-width="6" stroke-dasharray="26 16"/>
+  <line x1="60" y1="650" x2="1020" y2="650" stroke="#c0392b" stroke-width="6" stroke-dasharray="26 16"/>
+  <text x="300" y="32"  text-anchor="middle" font-size="26" fill="#111">Barrier left</text>
+  <text x="300" y="690" text-anchor="middle" font-size="26" fill="#111">Barrier right</text>
+  <!-- axes -->
+  <line x1="60" y1="40" x2="60" y2="660" stroke="#111" stroke-width="4"/>
+  <line x1="60" y1="352" x2="1020" y2="352" stroke="#111" stroke-width="2"/>
+  <text x="34" y="360" text-anchor="middle" font-size="26" fill="#111" transform="rotate(-90 34 360)">Relative decision value</text>
+  <!-- evidence accumulation path -->
+  <polyline fill="none" stroke="#111" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"
+    points="60,352 95,250 120,290 150,265 175,300 200,210 220,235 245,200 270,215 300,300 330,340 360,300 385,360 410,395 440,360 465,470 500,360 530,335 560,300 590,330 620,300 650,345 685,360 710,415 740,395 770,470 800,430 835,560 865,470 895,545 925,600 955,520 985,580 1005,540 1018,632"/>
+  <!-- choice marker -->
+  <circle cx="1010" cy="635" r="46" fill="none" stroke="#111" stroke-width="3"/>
+  <text x="1055" y="690" text-anchor="middle" font-size="26" fill="#111">Choose right</text>
+</svg>

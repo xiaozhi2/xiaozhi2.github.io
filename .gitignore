@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Word temp/lock files
+~$*
+
+# CV drafts / source docs (keep only the published XZ_CV.pdf)
+documents/*.docx
+documents/XZ_CV_2025.pdf
+documents/XIAOZHI_cv_2026.docx
+
+# local backups
+*.bak
+index_old_cv.html.bak

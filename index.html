@@ -1,104 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="WmzAeS_1Eh-zWNe00OGtVOiaU6FFcWKu2dzI7rcczgk" />
-	 <meta name="description" content="Xiaozhi (Taro) Yang - MindCORE postdoctoral fellow at the University of Pennsylvania">
-    <title>Xiaozhi Yang</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-
-    <!-- Inline CSS for Responsive Layout -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: row;
-            height: 100vh;
-        }
-
-        #left-panel {
-            width:0%;
-            background-color: whitesmoke;
-            padding: 50px;
-            box-sizing: border-box;
-            overflow-y: auto;
-        }
-
-        #right-panel {
-            width: 100%;
-            display: flex;
-			background-color:whitesmoke;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-			background-color: white;
-        }
-
-        .avatar img {
-            width: 100%;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .sidebar-nav a {
-            display: block;
-            margin: 10px 0;
-            text-decoration: none;
-            color: #333;
-            font-size: 1em;
-        }
-
-        .sidebar-nav a:hover {
-            color: #007bff;
-        }
-
-		   /* Ensure the custom font size for <h1> applies */
-			h1 {
-            font-size: 1.5rem !important; /* Ensure the size is applied */
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 1.2rem !important;
-            color: #555;
-        }
-		
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="WmzAeS_1Eh-zWNe00OGtVOiaU6FFcWKu2dzI7rcczgk" />
+  <meta name="description" content="Xiaozhi (Taro) Yang — MindCORE postdoctoral fellow at the University of Pennsylvania. Research on judgment and decision making and cognitive computational modeling.">
+  <title>Xiaozhi (Taro) Yang</title>
+  <link rel="canonical" href="https://xiaozhi2.github.io/">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
+  <header class="site">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Xiaozhi (Taro) Yang</a>
+      <nav class="menu">
+        <a href="index.html" class="active">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="misc.html">Misc</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Left Panel -->
-    <!-- <div id="left-panel">
-        <div class="avatar">
-            <img src="images/xiaozhi.jpeg" alt="Xiaozhi Yang">
-        </div class = "profile">
+  <main>
+    <section class="hero">
+      <img src="images/xiaozhi.jpeg" alt="Xiaozhi Yang">
+      <div>
         <h1>Xiaozhi (Taro) Yang</h1>
-        <h2>MindCORE Postdoctoral Fellow</h2>
-        <h2>University of Pennsylvania</h2>
+        <p class="role">MindCORE Fellow · PennAI Fellow</p>
+        <p class="where">University of Pennsylvania</p>
+        <p class="links">
+          <a href="mailto:xiaozhi2@sas.upenn.edu">Email</a>
+          <a href="https://www.linkedin.com/in/xiaozhi-yang-192023214/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/xiaozhi2" target="_blank" rel="noopener">GitHub</a>
+          <a href="cv.html">CV</a>
+        </p>
+      </div>
+    </section>
 
-        Contact Links -->
-        <!-- <nav class="sidebar-nav">
-            <a href="mailto:xiaozhi2@sas.upenn.edu"><i class="fa fa-envelope"></i> Email</a>
-			<a href="https://www.linkedin.com/in/xiaozhi-yang-192023214/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-			<a href="https://github.com/xiaozhi2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-   </nav>
-    </div> --> 
+    <h2 class="section">About</h2>
+    <p>
+      I am a MindCORE Fellow and PennAI Fellow at the University of Pennsylvania, working with
+      <a href="https://web.sas.upenn.edu/cbs-lab/" target="_blank" rel="noopener">Sudeep Bhatia</a>,
+      <a href="https://www.kablelab.com/" target="_blank" rel="noopener">Joe Kable</a>, and
+      <a href="https://schapirolab.org/" target="_blank" rel="noopener">Anna Schapiro</a>. Before joining Penn,
+      I completed my Ph.D. in Psychology at The Ohio State University with
+      <a href="https://krajbichlab.psych.ucla.edu/people/" target="_blank" rel="noopener">Ian Krajbich</a> and
+      spent time as a visiting researcher at UCLA. During my Ph.D., I interned at Meta FAIR Analytics and
+      Snap Research.
+    </p>
+    <p>
+      I study how the mind learns, decides, and generalizes over time. My research examines the
+      cognitive processes that unfold during learning and decision making, with a particular focus
+      on how visual attention and memory guide these processes. At the core of my work are dynamic
+      computational models of decision making, which I build and test with process-tracing tools such as
+      eye-tracking and mouse-tracking, alongside methods from natural language processing and large
+      language models.
+    </p>
 
-    <!-- Right Panel -->
-    <div id="right-panel">
-		<iframe src="documents/XZ_CV.pdf"></iframe>
+    <h2 class="section">Representative Work</h2>
+
+    <h3 class="rtheme">Attention and multi-attribute choice</h3>
+    <p class="rtheme-lead">One line of my research focuses on how external information search shapes multi-attribute
+      choice. I develop dynamic models of decision making that explain how gaze toward options and attributes is
+      integrated into the choice process. More recently, I have examined how visual attention influences attribute
+      consideration, and how people allocate attention more strategically as choice environments become more complex.</p>
+
+    <div class="rwork">
+      <div class="rfig"><img src="images/papers/gaze-choice-fig.svg" alt="Figure: dynamic model of gaze and choice"
+        onerror="this.parentNode.classList.add('rfig-empty');this.remove();"></div>
+      <div class="rbody">
+        <div class="title"><a href="https://www.semanticscholar.org/paper/A-dynamic-computational-model-of-gaze-and-choice-in-Yang-Krajbich/69b44ac8e056d99599228cd4a89fdc37b4086b27" target="_blank" rel="noopener">A dynamic computational model of gaze and choice in multiattribute decisions</a></div>
+        <div class="meta"><strong>Yang, X.</strong>, &amp; Krajbich, I. (2023) · <em>Psychological Review</em></div>
+        <p class="summary">A dynamic model of how gaze toward both options and attributes shapes choice, and how
+          attribute-level gaze reflects the weight people assign to different attributes.</p>
+        <p class="links"><a href="https://www.semanticscholar.org/paper/A-dynamic-computational-model-of-gaze-and-choice-in-Yang-Krajbich/69b44ac8e056d99599228cd4a89fdc37b4086b27" target="_blank" rel="noopener">Paper</a></p>
+      </div>
     </div>
 
+    <h3 class="rtheme">Option generation and decision from memory</h3>
+    <p class="rtheme-lead">How do individuals make open-ended decisions when the options are not given, but must be
+      generated from memory? This question is increasingly important in the age of AI, where everyday interactions
+      with language models often begin with self-generated queries, prompts, and goals.</p>
+
+    <div class="rwork">
+      <div class="rfig"><img src="images/papers/sciadv-fig.svg" alt="Figure: memory accessibility and self-generated options"
+        onerror="this.parentNode.classList.add('rfig-empty');this.remove();"></div>
+      <div class="rbody">
+        <div class="title">A dynamic computational account of the effects of memory accessibility on decisions with self-generated options</div>
+        <div class="meta"><strong>Yang, X.</strong>, Zhang, Z., Hsu, M., &amp; Krajbich, I. · <em>Under revision, Science Advances</em></div>
+        <p class="summary">When people must generate their own options, they evaluate them as they come to mind and
+          favor those recalled earlier — a bias amplified under time pressure. In this paper, we also develop a dynamic
+          model in which value and accessibility jointly drive choice and response time, capturing when accessibility
+          helps and when it hurts.</p>
+      </div>
+    </div>
+
+    <h3 class="rtheme">Accessible tools</h3>
+    <p class="rtheme-lead">While process-tracing techniques like eye-tracking offer invaluable insight into how decisions
+      unfold over time, a major barrier for many researchers is the effort required to collect data in the lab. To
+      lower that barrier, I have worked to make online eye-tracking more broadly accessible — and recently applied
+      it to <a href="https://osf.io/preprints/psyarxiv/ecrdw_v1" target="_blank" rel="noopener">defending against AI agents</a>.</p>
+
+    <div class="rwork">
+      <div class="rfig"><img src="images/papers/webcam-eyetracking.svg" alt="Figure: webcam-based eye-tracking pipeline"
+        onerror="this.parentNode.classList.add('rfig-empty');this.remove();"></div>
+      <div class="rbody">
+        <div class="title">Webcam-based online eye-tracking for behavioral research</div>
+        <div class="meta"><strong>Yang, X.</strong>, &amp; Krajbich, I. (2021) · <em>Judgment and Decision Making</em></div>
+        <p class="summary">A validated, low-cost method for collecting gaze data over the web—integrating
+          the WebGazer library into jsPsych experiments.</p>
+        <p class="links"><a href="https://www.cambridge.org/core/journals/judgment-and-decision-making/article/webcambased-online-eyetracking-for-behavioral-research/B726E77B68A76577F9BC6BB8F1EBC6E4" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/xiaozhi2/webgazertutorial" target="_blank" rel="noopener">Tutorial &amp; code</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site">
+    © Xiaozhi (Taro) Yang · <a href="mailto:xiaozhi2@sas.upenn.edu">xiaozhi2@sas.upenn.edu</a>
+  </footer>
 </body>
 </html>

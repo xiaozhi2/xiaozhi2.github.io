@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Inter','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf8f5"/>
+      <stop offset="100%" stop-color="#f4eee8"/>
+    </linearGradient>
+    <radialGradient id="heatA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e23b2e" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#f0a000" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f0a000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="heatB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e23b2e" stop-opacity="0.7"/>
+      <stop offset="45%" stop-color="#f0a000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f0a000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#7a1f2b" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- browser window -->
+  <g filter="url(#shadow)">
+    <rect x="24" y="26" width="432" height="308" rx="16" fill="url(#bg)" stroke="#e4ddd5" stroke-width="1.5"/>
+  </g>
+  <path d="M24 42 a16 16 0 0 1 16 -16 h400 a16 16 0 0 1 16 16 v6 h-432 z" fill="#efe7df"/>
+  <circle cx="44" cy="35" r="4.5" fill="#e07a5f"/>
+  <circle cx="60" cy="35" r="4.5" fill="#e6c35c"/>
+  <circle cx="76" cy="35" r="4.5" fill="#9bbf7a"/>
+  <rect x="120" y="28" width="280" height="15" rx="7.5" fill="#fff" stroke="#e3dbd2"/>
+  <text x="134" y="39" font-size="9.5" fill="#a59d94">localhost:2500 · jsPsych × WebGazer</text>
+
+  <!-- prompt -->
+  <text x="240" y="78" text-anchor="middle" font-size="12.5" font-weight="600" fill="#5a5249">Which would you choose?</text>
+
+  <!-- choice stimuli -->
+  <rect x="60"  y="120" width="140" height="140" rx="16" fill="#fff" stroke="#cfdbc5" stroke-width="2"/>
+  <rect x="280" y="120" width="140" height="140" rx="16" fill="#fff" stroke="#e7c8b4" stroke-width="2.5"/>
+  <!-- food A: apple -->
+  <circle cx="130" cy="185" r="38" fill="#9bbf7a"/>
+  <circle cx="118" cy="174" r="11" fill="#b4d196" opacity="0.8"/>
+  <path d="M130 150 q5 -10 14 -8" fill="none" stroke="#6f5132" stroke-width="3" stroke-linecap="round"/>
+  <!-- food B: orange -->
+  <circle cx="350" cy="185" r="38" fill="#eaa05e"/>
+  <circle cx="338" cy="174" r="10" fill="#f3bd86" opacity="0.85"/>
+  <circle cx="350" cy="185" r="38" fill="none" stroke="#d98c44" stroke-width="2"/>
+
+  <!-- gaze heat -->
+  <circle cx="130" cy="185" r="46" fill="url(#heatA)" filter="url(#soft)"/>
+  <circle cx="350" cy="185" r="52" fill="url(#heatB)" filter="url(#soft)"/>
+
+  <!-- scanpath -->
+  <polyline fill="none" stroke="#7a1f2b" stroke-width="2.2" stroke-opacity="0.6" stroke-linecap="round"
+    stroke-dasharray="1 5" points="130,185 175,150 240,205 305,160 350,185 330,215 150,205 130,185"/>
+  <g fill="#fff" stroke="#7a1f2b" stroke-width="1.6">
+    <circle cx="130" cy="185" r="5"/><circle cx="240" cy="205" r="4"/><circle cx="305" cy="160" r="4"/>
+  </g>
+  <!-- live prediction point -->
+  <circle cx="350" cy="185" r="9" fill="#e23b2e" fill-opacity="0.25"/>
+  <circle cx="350" cy="185" r="5" fill="#e23b2e" stroke="#fff" stroke-width="1.6"/>
+
+  <!-- calibration corner dots -->
+  <g fill="#cdc6bd">
+    <circle cx="46" cy="104" r="3.5"/><circle cx="434" cy="104" r="3.5"/>
+    <circle cx="46" cy="288" r="3.5"/><circle cx="434" cy="288" r="3.5"/>
+  </g>
+
+  <!-- webcam inset -->
+  <g filter="url(#shadow)">
+    <rect x="332" y="58" width="104" height="80" rx="10" fill="#20262e"/>
+  </g>
+  <rect x="332" y="58" width="104" height="80" rx="10" fill="none" stroke="#3a424c"/>
+  <circle cx="384" cy="98" r="24" fill="#f0c9a8"/>
+  <path d="M360 92 a24 24 0 0 1 48 0 v-6 a24 24 0 0 0 -48 0 z" fill="#7b5a3c"/>
+  <ellipse cx="375" cy="98" rx="4.2" ry="3.4" fill="#fff"/><circle cx="376" cy="98" r="2" fill="#2b2b2b"/>
+  <ellipse cx="393" cy="98" rx="4.2" ry="3.4" fill="#fff"/><circle cx="392" cy="98" r="2" fill="#2b2b2b"/>
+  <path d="M378 110 q6 4 12 0" fill="none" stroke="#c98a6a" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- detection boxes -->
+  <rect x="366" y="90" width="14" height="11" rx="2" fill="none" stroke="#9bbf7a" stroke-width="1.4"/>
+  <rect x="388" y="90" width="14" height="11" rx="2" fill="none" stroke="#9bbf7a" stroke-width="1.4"/>
+  <circle cx="343" cy="69" r="3" fill="#e23b2e"/>
+  <text x="384" y="132" text-anchor="middle" font-size="8" fill="#9bbf7a" letter-spacing="0.5">REC · gaze tracking</text>
+</svg>

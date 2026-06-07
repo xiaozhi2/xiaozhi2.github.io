@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250">
+  <rect width="380" height="250" fill="#fff"/>
+  <!-- attention bands -->
+  <rect x="46" y="40" width="78" height="170" fill="#e4eadf"/>
+  <rect x="124" y="40" width="78" height="170" fill="#efe6e0"/>
+  <rect x="202" y="40" width="78" height="170" fill="#dfead0"/>
+  <rect x="280" y="40" width="80" height="170" fill="#ecd8c2"/>
+  <!-- band labels -->
+  <g font-family="Georgia,serif" font-size="10" fill="#3a3a3a" text-anchor="middle">
+    <text x="85" y="54">Upper left</text>
+    <text x="163" y="54">Upper right</text>
+    <text x="241" y="54">Lower left</text>
+    <text x="320" y="54">Lower right</text>
+  </g>
+  <!-- barriers -->
+  <line x1="46" y1="40" x2="360" y2="40" stroke="#c0392b" stroke-width="4" stroke-dasharray="12 7" stroke-linecap="round"/>
+  <line x1="46" y1="210" x2="360" y2="210" stroke="#c0392b" stroke-width="4" stroke-dasharray="12 7" stroke-linecap="round"/>
+  <!-- axes -->
+  <line x1="46" y1="32" x2="46" y2="222" stroke="#161616" stroke-width="2"/>
+  <line x1="46" y1="125" x2="360" y2="125" stroke="#161616" stroke-width="1.2"/>
+  <!-- accumulation path -->
+  <polyline fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"
+    points="46,125 58,98 66,112 74,104 82,116 90,92 98,78 106,86 112,80 120,104 130,120 138,112
+            146,134 154,128 162,150 168,144 176,168 182,160 190,150 200,132 210,118 218,126 226,114
+            232,122 240,140 248,132 256,152 262,146 270,170 276,162 284,150 292,176 300,166 308,190
+            316,180 324,196 332,184 340,202 346,196 350,205"/>
+  <!-- choose circle -->
+  <circle cx="350" cy="205" r="13" fill="none" stroke="#161616" stroke-width="1.6"/>
+  <!-- labels -->
+  <g font-family="Georgia,serif" font-size="11" fill="#161616">
+    <text x="200" y="22" text-anchor="middle">Barrier left</text>
+    <text x="200" y="240" text-anchor="middle">Barrier right</text>
+    <text x="340" y="242" text-anchor="end">Choose right</text>
+  </g>
+  <text x="20" y="125" font-family="Georgia,serif" font-size="11" fill="#161616"
+    text-anchor="middle" transform="rotate(-90 20 125)">Relative decision value</text>
+</svg>
