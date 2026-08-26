@@ -1,5 +1,5 @@
 /* Xiaozhi Yang — academic site */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 :root{
   --accent:#7a1f2b;        /* penn maroon */
@@ -11,8 +11,8 @@
   --bg:#ffffff;
   --bg-soft:#faf7f4;
   --max:940px;
-  --serif:"Newsreader",Georgia,serif;
-  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --serif:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --sans:"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -62,6 +62,7 @@ h2.section{
   display:flex;align-items:center;gap:14px;
 }
 h2.section::after{content:"";flex:1;height:1px;background:var(--line);}
+h2.section[id]{scroll-margin-top:86px;}
 .lead{color:var(--muted);font-size:1.08rem;}
 p{margin:0 0 18px;}
 
@@ -117,6 +118,58 @@ p{margin:0 0 18px;}
 }
 
 /* representative work */
+p.program-lead{font-size:1.28rem;line-height:1.6;color:var(--ink);}
+
+/* research program figure */
+.program-img{
+  display:block;width:100%;max-width:620px;height:auto;margin:8px auto 4px;
+  border-radius:12px;
+}
+
+/* research program diagram */
+.program{
+  display:flex;align-items:stretch;gap:14px;margin:8px 0 8px;
+}
+.prog-col{flex:1;display:flex;flex-direction:column;gap:12px;}
+.prog-themes{justify-content:center;}
+.prog-head{
+  font-family:var(--sans);font-size:.72rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--muted);text-align:center;margin-bottom:2px;
+}
+.prog-card{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.prog-card b{display:block;font-family:var(--serif);font-size:1rem;line-height:1.25;}
+.prog-card span{display:block;font-size:.82rem;color:var(--muted);margin-top:3px;line-height:1.35;}
+.prog-card.m-int{border-left:4px solid #8e7cc3;}
+.prog-card.m-learn,.prog-card.m-search{border-left:4px solid #7fae7f;}
+.prog-card.m-rep{border-left:4px solid #7a9cc6;}
+.prog-flow{
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);font-size:1.5rem;font-weight:700;flex-shrink:0;
+}
+.prog-theme{
+  border-radius:12px;padding:16px 14px;text-align:center;
+  font-family:var(--serif);font-weight:600;font-size:1.06rem;border:1px solid var(--line);
+}
+.prog-theme.t-int{background:#ece7f4;border-color:#d7cbe8;color:#5a4a86;}
+.prog-theme.t-search{background:#e6f0e6;border-color:#cfe0cf;color:#3f6b3f;}
+.prog-theme.t-rep{background:#e6eef6;border-color:#cdddec;color:#3f6188;}
+
+/* clickable theme buttons under the program figure */
+.prog-cta{color:var(--muted);font-size:.96rem;text-align:center;margin:18px 0 12px;}
+.prog-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;}
+.prog-links .prog-theme{
+  flex:1;min-width:180px;max-width:280px;cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+}
+.prog-links .prog-theme:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.10);}
+@media(max-width:720px){
+  .program{flex-direction:column;}
+  .prog-flow{transform:rotate(90deg);font-size:1.3rem;padding:2px 0;}
+}
+
 /* news */
 .news{list-style:none;margin:0;padding:0;}
 .news li{
@@ -125,8 +178,8 @@ p{margin:0 0 18px;}
 }
 .news li:last-child{border-bottom:none;}
 .news-date{
-  flex-shrink:0;width:74px;font-family:var(--sans);font-size:.8rem;font-weight:600;
-  color:var(--accent);letter-spacing:.02em;text-transform:uppercase;
+  flex-shrink:0;width:82px;font-family:var(--serif);font-size:.92rem;font-weight:600;
+  color:var(--accent);
 }
 .news-body{font-size:.98rem;}
 
