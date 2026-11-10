@@ -120,9 +120,70 @@ p{margin:0 0 18px;}
 /* representative work */
 p.program-lead{font-size:1.28rem;line-height:1.6;color:var(--ink);}
 
+/* flip-through photo album */
+.album{
+  position:relative;margin-top:10px;display:flex;align-items:center;
+  justify-content:center;gap:10px;
+}
+.album-stage{
+  position:relative;flex:1;max-width:620px;height:420px;
+  perspective:1600px;
+}
+.album-slide{
+  position:absolute;inset:0;margin:0;opacity:0;pointer-events:none;
+  transform:rotateY(-12deg);transform-origin:left center;
+  transition:opacity .45s ease,transform .45s ease;
+  display:flex;flex-direction:column;
+}
+.album-slide.is-active{opacity:1;pointer-events:auto;transform:rotateY(0);z-index:2;}
+.album-slide.flip-out-left{opacity:0;transform:rotateY(-80deg);z-index:1;}
+.album-slide.flip-out-right{opacity:0;transform:rotateY(80deg);transform-origin:right center;z-index:1;}
+.album-slide img{
+  width:100%;height:100%;object-fit:cover;border-radius:14px;
+  border:1px solid var(--line);box-shadow:0 12px 34px rgba(0,0,0,.18);
+}
+.album-slide figcaption{
+  margin-top:10px;font-size:.9rem;color:var(--muted);text-align:center;
+}
+.album-nav{
+  flex-shrink:0;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--accent);
+  font-size:1.5rem;line-height:1;cursor:pointer;z-index:5;
+  box-shadow:0 3px 10px rgba(0,0,0,.08);transition:all .15s;
+}
+.album-nav:hover{background:var(--accent-soft);border-color:var(--accent);transform:translateY(-1px);}
+.album-dots{
+  position:absolute;bottom:-26px;left:0;right:0;display:flex;gap:8px;justify-content:center;
+}
+.album-dot{
+  width:9px;height:9px;border-radius:50%;border:none;padding:0;cursor:pointer;
+  background:var(--line);transition:background .15s;
+}
+.album-dot.is-active{background:var(--accent);}
+@media(max-width:640px){
+  .album-stage{height:300px;}
+}
+
+/* compact album */
+.album-small{margin:18px 0 44px;gap:8px;}
+.album-small .album-stage{max-width:300px;height:250px;}
+.album-small .album-slide img{height:185px;}
+.album-small .album-nav{width:32px;height:32px;font-size:1.2rem;}
+.album-small .album-slide figcaption{font-size:.8rem;margin-top:8px;line-height:1.35;}
+.album-small .album-dots{bottom:-26px;}
+.album-small .album-dot{width:7px;height:7px;}
+
+.about-text{text-align:left;}
+
+/* floated album — text wraps around it */
+.album-float{float:right;clear:right;width:300px;margin:2px 0 30px 34px;}
+@media(max-width:860px){
+  .album-float{float:none;width:300px;margin:18px auto 40px;}
+}
+
 /* research program figure */
 .program-img{
-  display:block;width:100%;max-width:620px;height:auto;margin:8px auto 4px;
+  display:block;width:100%;max-width:460px;height:auto;margin:8px auto 4px;
   border-radius:12px;
 }
 

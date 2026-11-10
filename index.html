@@ -49,7 +49,26 @@
     </section>
 
     <h2 class="section">About</h2>
-    <p>
+    <div class="album album-small album-float" id="album">
+      <button class="album-nav prev" aria-label="Previous photo">&#8249;</button>
+      <div class="album-stage">
+        <figure class="album-slide is-active">
+          <img src="images/retreat-talk.jpg" alt="Presenting my work on gaze and choice">
+          <figcaption>Presenting my work at MindCORE retreat.</figcaption>
+        </figure>
+        <figure class="album-slide">
+          <img src="images/retreat-group.jpg" alt="With MindCORE colleagues">
+          <figcaption>"Committee meeting" at MindCORE retreat.</figcaption>
+        </figure>
+        <figure class="album-slide">
+          <img src="images/retreat-sne.jpg" alt="Penn student presenting at SNE">
+          <figcaption>Penn's student presented her work at SNE.</figcaption>
+        </figure>
+      </div>
+      <button class="album-nav next" aria-label="Next photo">&#8250;</button>
+      <div class="album-dots"></div>
+    </div>
+    <p class="about-text">
       I am a MindCORE Fellow and PennAI Fellow at the University of Pennsylvania, working with
       <a href="https://web.sas.upenn.edu/cbs-lab/" target="_blank" rel="noopener">Sudeep Bhatia</a>,
       <a href="https://www.kablelab.com/" target="_blank" rel="noopener">Joe Kable</a>, and
@@ -59,7 +78,7 @@
       spent time as a visiting researcher at UCLA. During my Ph.D., I interned at Meta FAIR Analytics and
       Snap Research.
     </p>
-    <p>
+    <p class="about-text">
       I study how the mind learns, decides, and generalizes over time. My research examines the
       cognitive processes that unfold during learning and decision making, with a particular focus
       on how visual attention and memory guide these processes. At the core of my work are dynamic
@@ -82,8 +101,40 @@
       <a class="prog-theme t-rep" href="publications.html#knowledge-representation">Knowledge representation</a>
     </div>
 
-
   </main>
+
+  <script>
+    (function () {
+      var album = document.getElementById('album');
+      if (!album) return;
+      var slides = Array.prototype.slice.call(album.querySelectorAll('.album-slide'));
+      var dotsWrap = album.querySelector('.album-dots');
+      var i = 0;
+      slides.forEach(function (s, n) {
+        var d = document.createElement('button');
+        d.className = 'album-dot' + (n === 0 ? ' is-active' : '');
+        d.addEventListener('click', function () { go(n); });
+        dotsWrap.appendChild(d);
+      });
+      var dots = Array.prototype.slice.call(dotsWrap.children);
+      function go(n) {
+        if (n === i) return;
+        var dir = n > i ? 'flip-next' : 'flip-prev';
+        slides[i].classList.remove('is-active');
+        slides[i].classList.add(dir === 'flip-next' ? 'flip-out-left' : 'flip-out-right');
+        var prev = i;
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active');
+        dots[prev].classList.remove('is-active');
+        dots[i].classList.add('is-active');
+        setTimeout(function () {
+          slides[prev].classList.remove('flip-out-left', 'flip-out-right');
+        }, 450);
+      }
+      album.querySelector('.prev').addEventListener('click', function () { go(i - 1); });
+      album.querySelector('.next').addEventListener('click', function () { go(i + 1); });
+    })();
+  </script>
 
   <footer class="site">
     © Xiaozhi (Taro) Yang · <a href="mailto:xiaozhi2@sas.upenn.edu">xiaozhi2@sas.upenn.edu</a>
